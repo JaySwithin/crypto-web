@@ -9,7 +9,7 @@ function Home() {
           <p className="mt-8 text-gray-400">Here you can find the latest news on crypto as well as do coversion from crypto to other currencies</p>
 
           <div className="mt-8 flex items-center justify-center">
-            <button className="w-1/3 h-10 flex items-center justify-center rounded-md bg-yellow-600 text-white font-semibold" type="button">Get Started!</button>
+            <button className="w-1/3 h-10 rounded-md bg-yellow-600 text-white font-semibold" type="button">Get Started</button>
           </div>
         </div>
       </div>

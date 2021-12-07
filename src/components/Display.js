@@ -7,7 +7,7 @@ function Display() {
   const [secondaryValue, setSecondaryValue] = useState('BTC');
   const [amount, setAmount] = useState(1);
 
-  console.log(secondaryValue);
+  console.log(amount);
 
 
 

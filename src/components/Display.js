@@ -85,9 +85,9 @@ function Display() {
               </div>
             </div>
             <div uk-scrollspy="cls: uk-animation-slide-right; repeat: true">
-              <div class="uk-card uk-card-body uk-card-padding-responsive uk-card-default uk-card-hover">
+              <div class="uk-card uk-card-body uk-card-padding-responsive uk-card-default bg-gray-600">
                 <div class="uk-text-center">
-                  <h3 class="uk-text-muted uk-text-bold uk-text-primary">NITA STAFF DATA CENTER ACCESS REQUEST</h3>
+                  <h3 class="text-center text-lg font-semibold text-white">News Feed</h3>
 
                 </div>
               </div>

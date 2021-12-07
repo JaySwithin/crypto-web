@@ -63,6 +63,7 @@ function Display() {
                 </tr>
               </tbody>
             </table>
+            <button className="w-1/3 lg:w-1/4 h-8 rounded-md bg-yellow-600 text-white font-semibold mt-2" type="button">Get Started</button>
           </div>
         </div>
         <div>

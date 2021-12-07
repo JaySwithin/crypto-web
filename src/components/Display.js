@@ -77,7 +77,7 @@ function Display() {
         <div className="uk-width-2-3@l uk-width-1-1@s uk-width-1-1@m uk-margin-auto">
           <div className="uk-grid uk-grid-medium uk-grid-match uk-child-width-1-1@s uk-child-width-1-2@m uk-child-width-1-2@l">
             <div uk-scrollspy="cls: uk-animation-slide-left; repeat: true">
-              <div class="uk-card uk-card-body uk-card-padding-responsive uk-card-default bg-gray-600">
+              <div class="uk-card uk-card-body uk-card-padding-responsive uk-card-default uk-card-hover mt-2 bg-gray-600">
                 <div class="uk-text-center">
                   <h3 class="text-center text-lg font-semibold text-white">Convert Currency</h3>
 
@@ -85,7 +85,7 @@ function Display() {
               </div>
             </div>
             <div uk-scrollspy="cls: uk-animation-slide-right; repeat: true">
-              <div class="uk-card uk-card-body uk-card-padding-responsive uk-card-default bg-gray-600">
+              <div class="uk-card uk-card-body uk-card-padding-responsive uk-card-default uk-card-hover mt-2 bg-gray-600">
                 <div class="uk-text-center">
                   <h3 class="text-center text-lg font-semibold text-white">News Feed</h3>
 

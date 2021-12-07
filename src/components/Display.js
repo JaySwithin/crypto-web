@@ -9,8 +9,6 @@ function Display() {
 
   console.log(amount);
 
-
-
   return (
     <div className="p-8">
       <div className="mt-4 grid md:grid-cols-2 gap-8">

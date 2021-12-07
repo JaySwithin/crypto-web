@@ -4,7 +4,9 @@
 @tailwind components;
 @tailwind utilities;
 
-
+:root{
+  background-color: black;
+}
 
 
 body {
@@ -12,5 +14,4 @@ body {
   margin: 0;
   -webkit-font-smoothing: antialiased; 
   -moz-osx-font-smoothing: grayscale;
-  background-color: black;
 }

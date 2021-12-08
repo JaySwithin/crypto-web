@@ -1,5 +1,6 @@
-import React from 'react'
+import React from 'react';
 import { useState } from 'react';
+import axios from 'axios';
 
 function Display() {
   const currencies = ['BTC', 'ETH', 'USD', 'EUR', 'XRP' , 'LTC', 'ADA'];
@@ -8,6 +9,25 @@ function Display() {
   const [amount, setAmount] = useState(1);
 
   console.log(amount);
+
+  const convert = () => {
+
+    const options = {
+      method: 'GET',
+      url: 'https://alpha-vantage.p.rapidapi.com/query',
+      params: {from_currency: primaryValue, function: 'CURRENCY_EXCHANGE_RATE', to_currency: secondaryValue},
+      headers: {
+        'x-rapidapi-host': 'alpha-vantage.p.rapidapi.com',
+        'x-rapidapi-key': 'bd74e9c3a3mshd50db8f8a7756c3p176e64jsn36df10354d87'
+      }
+    };
+
+    axios.request(options).then((response) => {
+      console.log(response.data);
+    }).catch((error) => {
+      console.error(error);
+    });
+  }
 
   return (
     // <div className="p-8">
@@ -117,7 +137,7 @@ function Display() {
                   </div>
 
                   <div className="flex justify-center mt-4">
-                    <button id="convert-button" onclick={convert} className="w-1/3 lg:w-1/4 h-8 rounded-md bg-gray-400 text-white font-semibold mt-2 mb-2" type="button">Convert</button>
+                    <button id="convert-button" onClick={convert} className="w-1/3 lg:w-1/4 h-8 rounded-md bg-gray-400 text-white font-semibold mt-2 mb-2" type="button">Convert</button>
                  </div>
 
               </div>

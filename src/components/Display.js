@@ -7,7 +7,7 @@ function Display() {
   const [primaryValue, setPrimaryValue] = useState('BTC');
   const [secondaryValue, setSecondaryValue] = useState('BTC');
   const [amount, setAmount] = useState(1);
-  const [exxchangeRate, setExchangeRate] = useState(0);
+  const [exchangeRate, setExchangeRate] = useState(0);
 
   console.log(amount);
 
@@ -29,6 +29,8 @@ function Display() {
     }).catch((error) => {
       console.error(error);
     });
+
+    console.log(exchangeRate);
   }
 
   return (

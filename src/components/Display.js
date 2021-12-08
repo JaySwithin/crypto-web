@@ -117,7 +117,7 @@ function Display() {
                   </div>
 
                   <div className="flex justify-center mt-4">
-                    <button className="w-1/3 lg:w-1/4 h-8 rounded-md bg-gray-400 text-white font-semibold mt-2 mb-2" type="button">Convert</button>
+                    <button id="convert-button" onclick={convert} className="w-1/3 lg:w-1/4 h-8 rounded-md bg-gray-400 text-white font-semibold mt-2 mb-2" type="button">Convert</button>
                  </div>
 
               </div>

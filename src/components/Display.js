@@ -79,8 +79,8 @@ function Display() {
             <div uk-scrollspy="cls: uk-animation-slide-left; repeat: true">
               <div class="uk-card uk-card-body uk-card-padding-responsive uk-card-default mt-2 bg-gray-700">
                   <h3 class="text-center text-lg font-semibold text-white">Convert Currency</h3>
-                  <p>Primary Currency:</p>
-                  <div className="flex space-x-4">
+                  <p className="">Primary Currency:</p>
+                  <div className="flex space-x-4 mb-2">
                     <input className="text-center font-semibold uk-input uk-width-1-2"
                     type="number"
                     name="primary-currency"
@@ -99,6 +99,25 @@ function Display() {
                     </select>
                   </div>
 
+                  <p className="">Secondary Currency:</p>
+                  <div className="flex space-x-4">
+                    <input className="text-center font-semibold uk-input uk-width-1-2"
+                    type="number"
+                    name="secondary-currency"
+                    value={""}
+                    onChange={(e) => setAmount(e.target.value)}
+                    />
+
+                    <select 
+                    value={primaryValue}
+                    name="primary-option"
+                    className="primary-options uk-select uk-form-width-small" 
+                    onChange={(e) => setPrimaryValue(e.target.value)}
+                    >
+                    {currencies.map((currency, _index) => (<option key={_index}> {currency} </option>))}
+                    
+                    </select>
+                  </div>
               </div>
             </div>
             <div uk-scrollspy="cls: uk-animation-slide-right; repeat: true">

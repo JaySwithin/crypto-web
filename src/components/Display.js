@@ -7,6 +7,7 @@ function Display() {
   const [primaryValue, setPrimaryValue] = useState('BTC');
   const [secondaryValue, setSecondaryValue] = useState('BTC');
   const [amount, setAmount] = useState(1);
+  const [exxchangeRate, setExchangeRate] = useState(0);
 
   console.log(amount);
 
@@ -23,7 +24,8 @@ function Display() {
     };
 
     axios.request(options).then((response) => {
-      console.log(response.data);
+      console.log(response.data['Realtime Currency Exchange Rate']['5. Exchange Rate']);
+      setExchangeRate(response.data['Realtime Currency Exchange Rate']['5. Exchange Rate'])
     }).catch((error) => {
       console.error(error);
     });

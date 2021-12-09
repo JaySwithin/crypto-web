@@ -104,7 +104,7 @@ function Display() {
           <div className="uk-grid uk-grid-medium uk-grid-match uk-child-width-1-1@s uk-child-width-1-2@m uk-child-width-1-2@l">
             <div uk-scrollspy="cls: uk-animation-slide-left; repeat: true">
               <div className="uk-card uk-card-body uk-card-padding-responsive uk-card-default mt-2 bg-gray-700 ">
-                  <h3 className="text-center text-lg font-semibold text-white">Convert Currency</h3>
+                  <h3 className="text-center text-xl font-semibold text-white">Convert Currency</h3>
                   <p className="mt-2">Primary Currency:</p>
                   <div className="flex space-x-4 mb-2">
                     <input className="text-center font-semibold uk-input uk-width-1-2"
@@ -146,15 +146,18 @@ function Display() {
                   <div className="flex justify-center mt-4">
                     <button id="convert-button" onClick={convert} className="w-1/3 lg:w-1/4 h-8 rounded-md bg-gray-400 text-white font-semibold mt-2 mb-2" type="button">Convert</button>
                  </div>
-
+              <div className="mt-6 text-center">
+                <h2 className="text-white text-xl font-semibold">Currency Exchange Rate</h2>
+                <p>{exchangeRate}</p>
+              </div>
               </div>
             </div>
 
 
             <div uk-scrollspy="cls: uk-animation-slide-right; repeat: true">
               <div className="uk-card uk-card-body uk-card-padding-responsive uk-card-default mt-2 bg-gray-700">
-                <h3 className="text-center text-lg font-semibold text-white">News Feed</h3>
-
+                <h3 className="text-center text-xl font-semibold text-white">News Feed</h3>
+                exchangeRate
               </div>
             </div>
           </div>

@@ -24,7 +24,7 @@ export default function Display() {
       params: {from_currency: primaryValue, function: 'CURRENCY_EXCHANGE_RATE', to_currency: secondaryValue},
       headers: {
         'x-rapidapi-host': 'alpha-vantage.p.rapidapi.com',
-        'x-rapidapi-key': 'bd74e9c3a3mshd50db8f8a7756c3p176e64jsn36df10354d87'
+        'x-rapidapi-key': process.env.REACT_APP_RAPID_API_KEY
       }
     };
 
@@ -46,7 +46,7 @@ export default function Display() {
       url: 'https://crypto-news6.p.rapidapi.com/news',
       headers: {
         'x-rapidapi-host': 'crypto-news6.p.rapidapi.com',
-        'x-rapidapi-key': 'bd74e9c3a3mshd50db8f8a7756c3p176e64jsn36df10354d87'
+        'x-rapidapi-key': process.env.REACT_APP_RAPID_API_KEY2
       }
     };
     

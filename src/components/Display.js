@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { useEffect } from 'react'
 import axios from 'axios';
 
-function Display() {
+export default function Display() {
   const currencies = ['BTC', 'ETH', 'USD', 'EUR', 'XRP' , 'LTC', 'ADA'];
   const [primaryValue, setPrimaryValue] = useState('BTC');
   const [secondaryValue, setSecondaryValue] = useState('BTC');
@@ -203,4 +203,3 @@ function Display() {
   )
 }
 
-export default Display

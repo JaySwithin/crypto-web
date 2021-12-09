@@ -193,7 +193,6 @@ export default function Display() {
                   <a href={article.url} target="_blank"><h3 className="text-yellow-700 font-semibold">- {article.title} </h3></a>
                 </div>))}
 
-                
               </div>
             </div>
           </div>

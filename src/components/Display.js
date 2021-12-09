@@ -148,7 +148,8 @@ function Display() {
                  </div>
               <div className="mt-6 text-center">
                 <h2 className="text-white text-xl font-semibold">Currency Exchange Rate</h2>
-                <p>{exchangeRate}</p>
+                <p className="text-yellow-700 text-lg mt-2">{exchangeRate}</p>
+                <p className="text-">From {primaryValue} to {secondaryValue}</p>
               </div>
               </div>
             </div>
@@ -156,7 +157,7 @@ function Display() {
 
             <div uk-scrollspy="cls: uk-animation-slide-right; repeat: true">
               <div className="uk-card uk-card-body uk-card-padding-responsive uk-card-default mt-2 bg-gray-700">
-                <h3 className="text-center text-xl font-semibold text-white">News Feed</h3>
+                <h3 className="text-center text-xl font-semibold text-white">Latest News</h3>
                 exchangeRate
               </div>
             </div>

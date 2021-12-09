@@ -41,25 +41,28 @@ function Display() {
   }
   useEffect(() => {
 
-    const news_options = {
+    var options = {
       method: 'GET',
-      url: 'https://crypto-news-live.p.rapidapi.com/news',
+      url: 'https://crypto-news6.p.rapidapi.com/news',
       headers: {
-        'x-rapidapi-host': 'crypto-news-live.p.rapidapi.com',
+        'x-rapidapi-host': 'crypto-news6.p.rapidapi.com',
         'x-rapidapi-key': 'bd74e9c3a3mshd50db8f8a7756c3p176e64jsn36df10354d87'
       }
     };
-
-    axios.request(news_options).then((response) => {
+    
+    axios.request(options).then((response) => {
       console.log(response.data);
       setArticles(response.data)
     }).catch((error) => {
       console.error(error);
     });
 
-  });
+  }, []);
 
   console.log(articles);
+
+  const fewArticles = articles?.slice(0,12);
+
 
   return (
     // <div className="p-8">
@@ -184,6 +187,12 @@ function Display() {
             <div uk-scrollspy="cls: uk-animation-slide-right; repeat: true">
               <div className="uk-card uk-card-body uk-card-padding-responsive uk-card-default mt-2 bg-gray-700">
                 <h3 className="text-center text-xl font-semibold text-white">Latest News</h3>
+
+                {fewArticles?.map((article, _index)  => (
+                <div key={_index}>
+                  <h3 className="text-yellow-700 font-semibold">- {article.title} </h3>
+                </div>))}
+
                 
               </div>
             </div>

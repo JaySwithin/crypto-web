@@ -9,6 +9,9 @@ export default function Display() {
   const [secondaryValue, setSecondaryValue] = useState('BTC');
   const [amount, setAmount] = useState(1);
   const [exchangeRate, setExchangeRate] = useState(0);
+  const [primaryValueExchanged, setPrimaryValueExchanged] = useState('BTC');
+  const [secondaryValueExchanged, setSecondaryValueExchanged] = useState('BTC');
+
   const [result, setResult] = useState(0);
 
   const [articles, setArticles] = useState(null);
@@ -32,6 +35,9 @@ export default function Display() {
       console.log(response.data['Realtime Currency Exchange Rate']['5. Exchange Rate']);
       setExchangeRate(response.data['Realtime Currency Exchange Rate']['5. Exchange Rate']);
       setResult(response.data['Realtime Currency Exchange Rate']['5. Exchange Rate'] * amount);
+      setPrimaryValueExchanged(primaryValue);
+      setSecondaryValueExchanged(secondaryValue);
+
     }).catch((error) => {
       console.error(error);
     });
@@ -178,7 +184,7 @@ export default function Display() {
               <div className="mt-6 text-center">
                 <h2 className="text-white text-xl font-semibold">Currency Exchange Rate</h2>
                 <p className="text-yellow-700 text-lg mt-2">{exchangeRate}</p>
-                <p className="text-">From {primaryValue} to {secondaryValue}</p>
+                <p className="text-">From {primaryValueExchanged} to {secondaryValueExchanged}</p>
               </div>
               </div>
             </div>

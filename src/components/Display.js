@@ -133,7 +133,7 @@ export default function Display() {
     //   </div>
     // </div>
 
-    <div className="uk-container uk-margin-bottom">
+    <div className="uk-container mb-8">
       <div className="uk-card-first-push-up uk-margin-negative-top">
         <div className="uk-width-1-1@s uk-width-1-1@m uk-margin-auto">
           <div className="uk-grid uk-grid-medium uk-grid-match uk-child-width-1-1@s uk-child-width-1-2@m uk-child-width-1-2@l">

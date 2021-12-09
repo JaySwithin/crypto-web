@@ -1,5 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
+import { useEffect } from 'react'
 import axios from 'axios';
 
 function Display() {
@@ -158,7 +159,7 @@ function Display() {
             <div uk-scrollspy="cls: uk-animation-slide-right; repeat: true">
               <div className="uk-card uk-card-body uk-card-padding-responsive uk-card-default mt-2 bg-gray-700">
                 <h3 className="text-center text-xl font-semibold text-white">Latest News</h3>
-                exchangeRate
+                
               </div>
             </div>
           </div>

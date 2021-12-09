@@ -11,6 +11,9 @@ function Display() {
   const [exchangeRate, setExchangeRate] = useState(0);
   const [result, setResult] = useState(0);
 
+  const [articles, setArticles] = useState(null);
+
+
   console.log(amount);
 
   const convert = () => {
@@ -34,7 +37,29 @@ function Display() {
     });
 
     console.log(exchangeRate);
+    
   }
+  useEffect(() => {
+
+    const news_options = {
+      method: 'GET',
+      url: 'https://crypto-news-live.p.rapidapi.com/news',
+      headers: {
+        'x-rapidapi-host': 'crypto-news-live.p.rapidapi.com',
+        'x-rapidapi-key': 'bd74e9c3a3mshd50db8f8a7756c3p176e64jsn36df10354d87'
+      }
+    };
+
+    axios.request(news_options).then((response) => {
+      console.log(response.data);
+      setArticles(response.data)
+    }).catch((error) => {
+      console.error(error);
+    });
+
+  });
+
+  console.log(articles);
 
   return (
     // <div className="p-8">

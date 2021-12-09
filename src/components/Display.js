@@ -8,6 +8,7 @@ function Display() {
   const [secondaryValue, setSecondaryValue] = useState('BTC');
   const [amount, setAmount] = useState(1);
   const [exchangeRate, setExchangeRate] = useState(0);
+  const [result, setResult] = useState(0);
 
   console.log(amount);
 
@@ -25,7 +26,8 @@ function Display() {
 
     axios.request(options).then((response) => {
       console.log(response.data['Realtime Currency Exchange Rate']['5. Exchange Rate']);
-      setExchangeRate(response.data['Realtime Currency Exchange Rate']['5. Exchange Rate'])
+      setExchangeRate(response.data['Realtime Currency Exchange Rate']['5. Exchange Rate']);
+      setResult(response.data['Realtime Currency Exchange Rate']['5. Exchange Rate'] * amount);
     }).catch((error) => {
       console.error(error);
     });
@@ -103,7 +105,7 @@ function Display() {
             <div uk-scrollspy="cls: uk-animation-slide-left; repeat: true">
               <div className="uk-card uk-card-body uk-card-padding-responsive uk-card-default mt-2 bg-gray-700 ">
                   <h3 className="text-center text-lg font-semibold text-white">Convert Currency</h3>
-                  <p className="">Primary Currency:</p>
+                  <p className="mt-2">Primary Currency:</p>
                   <div className="flex space-x-4 mb-2">
                     <input className="text-center font-semibold uk-input uk-width-1-2"
                     type="number"
@@ -127,7 +129,8 @@ function Display() {
                     <input className="text-center font-semibold uk-input uk-width-1-2"
                     type="number"
                     name="secondary-currency"
-                    value={""}
+                    value={result}
+                    disabled
                     />
                     <select 
                     value={secondaryValue}

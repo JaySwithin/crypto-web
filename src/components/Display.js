@@ -196,7 +196,7 @@ export default function Display() {
 
                 {fewArticles?.map((article, _index)  => (
                 <div key={_index}>
-                  <a href={article.url} target="_blank"><h3 className="text-yellow-700 font-semibold">- {article.title} </h3></a>
+                  <a href={article.url} target="_blank" rel="noopener noreferrer"><h3 className="text-yellow-700 font-semibold">- {article.title} </h3></a>
                 </div>))}
 
               </div>

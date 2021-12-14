@@ -142,7 +142,7 @@ export default function Display() {
                   <h3 className="text-center text-xl font-semibold text-white">Convert Currency</h3>
                   <p className="mt-2">Primary Currency:</p>
                   <div className="flex space-x-4 mb-2">
-                    <input className="text-center font-semibold uk-input uk-width-1-2"
+                    <input className="text-center font-semibold uk-input uk-width-3-4"
                     type="number"
                     name="primary-currency"
                     value={amount}
@@ -151,7 +151,7 @@ export default function Display() {
                     <select 
                     value={primaryValue}
                     name="primary-option"
-                    className="primary-options uk-select uk-form-width-small" 
+                    className="primary-options uk-select uk-width-1-3" 
                     onChange={(e) => setPrimaryValue(e.target.value)}
                     >
                     {currencies.map((currency, _index) => (<option key={_index}> {currency} </option>))}
@@ -161,7 +161,7 @@ export default function Display() {
 
                   <p className="">Secondary Currency:</p>
                   <div className="flex space-x-4">
-                    <input className="text-center font-semibold uk-input uk-width-1-2"
+                    <input className="text-center font-semibold uk-input uk-width-3-4"
                     type="number"
                     name="secondary-currency"
                     value={result}
@@ -170,7 +170,7 @@ export default function Display() {
                     <select 
                     value={secondaryValue}
                     name="secondary-option"
-                    className="secondary-options uk-select uk-form-width-small" 
+                    className="secondary-options uk-select uk-width-1-3" 
                     onChange={(e) => setSecondaryValue(e.target.value)}
                     >
                     {currencies.map((currency, _index) => (<option key={_index}> {currency} </option>))}

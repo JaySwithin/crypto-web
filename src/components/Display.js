@@ -139,7 +139,7 @@ export default function Display() {
           <div className="uk-grid uk-grid-medium uk-grid-match uk-child-width-1-1@s uk-child-width-1-2@m uk-child-width-1-2@l">
             <div uk-scrollspy="cls: uk-animation-slide-left; repeat: true">
               <div className="uk-card uk-card-body uk-card-padding-responsive uk-card-default mt-2 bg-gray-700 ">
-                  <h3 className="text-center text-xl font-semibold text-white">Convert Currency</h3>
+                  <h3 className="text-center text-2xl font-semibold text-white">Convert Currency</h3>
                   <p className="mt-2">Primary Currency:</p>
                   <div className="flex space-x-4 mb-2">
                     <input className="text-center font-semibold uk-input uk-width-3-4"
@@ -192,7 +192,7 @@ export default function Display() {
 
             <div uk-scrollspy="cls: uk-animation-slide-right; repeat: true">
               <div className="uk-card uk-card-body uk-card-padding-responsive uk-card-default mt-2 bg-gray-700">
-                <h3 className="text-center text-xl font-semibold text-white">Latest News</h3>
+                <h3 className="text-center text-2xl font-semibold text-white">Latest News</h3>
 
                 {fewArticles?.map((article, _index)  => (
                 <div key={_index}>
